@@ -10,7 +10,10 @@
         <li>
             <span th:text="${data}"></span>
         </li>
+
         <li>[[${data}]]</li>
+        <li th:inline="none">[[${data}]]</li>
+
     </ul>
 </body>
 </html>

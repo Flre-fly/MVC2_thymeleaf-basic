@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Spring EL 표현식!</h1>
+    <h1 th:inline="none">${변수}</h1>
+    <h1>model에 있는 변수를 꺼낼 수 있다</h1>
+    <ul>User!
+        <span th:text="${user.username}"></span>
+        <span th:text="${user.getUsername()}"></span>
+    </ul>
+    <ul>List!
+        <span th:text="${users[0].username}"></span>
+        <span th:text="${users[0].getUsername()}"></span>
+        <span th:text="${users[1].username}"></span>
+        <span th:text="${users[1].getUsername()}"></span>
+    </ul>
+    <ul>MAP!
+        <span th:text="${userMap['userA'].username}"></span>
+        <span th:text="${userMap['userA'].age}"></span>
+    </ul>
+    <ul th:with="x=${user}">지역변수
+        <span th:text="${x.username}"></span>
+        <span th:text="${x.age}"></span>
+    </ul>
+</body>
+</html>

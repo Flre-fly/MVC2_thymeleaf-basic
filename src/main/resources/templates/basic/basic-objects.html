@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>basic-object</title>
+</head>
+<body>
+    <h1>요청, 응답, 세션에대한 정보를 출력해보자</h1>
+<li>
+    <ul th:inline="none">${request}</ul>
+    <ul th:text="${request}"></ul>
+</li>
+<li>
+    <ul th:inline="none">${response}</ul>
+    <ul th:text="${response}"></ul>
+</li>
+<li>
+    <ul th:inline="none">${#locale}</ul>
+    <ul th:text="${#locale}"></ul>
+</li>
+<li>
+    <ul th:inline="none">${@helloBean.hello('데이터아무거나')</ul>
+    <ul th:text="${@helloBean.hello('데이터아무거나')}"></ul>
+</li>
+<li>
+    <ul th:inline="none">${param.paramData}</ul>
+    <ul th:text="${param.paramData}"></ul>
+</li>
+<li>
+    <ul th:inline="none">${session.sessionData}</ul>
+    <ul th:text="${session.sessionData}"></ul>
+
+</li>
+</body>
+</html>
