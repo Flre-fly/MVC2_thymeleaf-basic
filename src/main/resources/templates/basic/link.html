@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{https://www.naver.com/}">절대 경로 이동 - 됨</a></li>
+    <li><a th:href="@{/hello}">basic url - 이어서 추가하는것</a></li>
+    <li><a th:href="@{/hello(param1=${param1}, param2=${param2})}">hello query
+        param</a></li>
+    <li><a th:href="@{/hello/{param1}/{param2}(param1=${param1}, param2=${param2})}">path variable</a></li>
+    <li><a th:href="@{/hello/{param1}(param1=${param1}, param2=${param2})}">path variable + query parameter</a></li>
+</ul>
+</body>
+</html>
